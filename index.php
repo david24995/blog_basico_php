@@ -1,6 +1,5 @@
     <?php  require_once('./includes/cabecera.php');  ?>
 
-    <!-- Barra Lateral -->
     <?php require_once('./includes/lateral.php'); ?>
 
     <!-- Caja Principal -->
