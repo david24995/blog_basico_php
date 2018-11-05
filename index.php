@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog de Video-Juegos</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- Cabecera -->
-    <header>
-        <div id="cabecera">
+    <header id="cabecera">
+        <div id="logo">
             <a href="index.php">Blog de Videojuegos</a>
         </div>
         <!-- MENU -->
         <nav id="menu">
             <ul>
-                <li><a href="index.php"></a>Inicio</li>
+                <li><a href="index.php">Inicio</a></li>
                 <li><a href="">Categoria 1</a></li>
                 <li><a href="">Categoria 2</a></li>
                 <li><a href="">Categoria 3</a></li>
@@ -24,6 +25,8 @@
                 <li><a href="">Contacto</a></li>
             </ul>
         </nav>
+
+        <div class="clearfix"></div>
     </header>
 
     <div id="contenedor">
@@ -35,7 +38,7 @@
             <form action="login.php" method="post">
                 <label for="email">Email</label>
                 <input type="email" name="email">
-                <label for="password">Email</label>
+                <label for="password">Password</label>
                 <input type="password" name="password">
                 <input type="submit" value="Entrar">
             </form>
@@ -52,7 +55,7 @@
                 <label for="email">Email</label>
                 <input type="email" name="email">
 
-                <label for="password">Email</label>
+                <label for="password">Password</label>
                 <input type="password" name="password">
 
                 <input type="submit" value="Registrar">
@@ -65,29 +68,39 @@
         <div id="principal">
             <h1>Ultimas entradas</h1>
             <article class="entrada" >
-                <h2>Titulo de la entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                    <h2>Titulo de la entrada</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
+                    </p>
+                </a>
             </article>
             <article class="entrada" >
-                <h2>Titulo de la entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                        <h2>Titulo de la entrada</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
+                        </p>
+                    </a>
             </article>
             <article class="entrada" >
-                <h2>Titulo de la entrada</h2>
-                <p>
-                    Descripcion de la entrada
-                </p>
+                <a href="">
+                        <h2>Titulo de la entrada</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
+                        </p>
+                    </a>
             </article>
+            <div id="ver-todas">
+                <a href="">Ver todas las entradas</a>
+            </div>
         </div>
 
+        <div class="clearfix"></div>
 
     </div>
 
-    <footer>
+    <footer id="pie">
         <p>Desarrollado por David Huamaccto Chate &copy; 2018 </p>
     </footer>
 
