@@ -5,33 +5,24 @@
     <!-- Caja Principal -->
     <div id="principal">
     <h1>Ultimas entradas</h1>
-    <article class="entrada" >
-        <a href="">
-            <h2>Titulo de la entrada</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
-            </p>
-        </a>
-    </article>
-    <article class="entrada" >
-        <a href="">
-                <h2>Titulo de la entrada</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
-                </p>
+    <?php
+        $entradas = obtenerEntradas($db,true);
+    if($entradas) :
+        while( $entrada = mysqli_fetch_assoc($entradas)):
+    ?>
+        <article class="entrada" >
+            <a href="entrada.php?id=<?=$entrada['id'];?>">
+                <h2> <?= $entrada['titulo']; ?> </h2>
+                <span class="fecha" > <?= $entrada['categoria'] . ' | ' . $entrada['fecha']; ?> </span>
+                <p> <?= substr($entrada['descripcion'],0,200). ' ...' ; ?> </p>
             </a>
-    </article>
-    <article class="entrada" >
-        <a href="">
-                <h2>Titulo de la entrada</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia odio perferendis reiciendis dolores voluptatibus qui laudantium esse expedita, perspiciatis ea omnis repudiandae aut earum autem! Recusandae porro perferendis vero distinctio.
-                </p>
-            </a>
-    </article>
+        </article>
+    <?php
+        endwhile;
+    endif;
+    ?>
     <div id="ver-todas">
-        <a href="">Ver todas las entradas</a>
+        <a href="entradas.php">Ver todas las entradas</a>
     </div>
 </div>
-
     <?php  require_once('./includes/footer.php'); ?>

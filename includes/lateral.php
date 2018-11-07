@@ -15,14 +15,6 @@
             <input type="submit" value="Entrar">
         </form>
     </div>
-    <?php  else: ?>
-        <div class="bloque">
-        <a class="boton" href="cerrar_sesion.php">Crear Entradas</a>
-        <a class="boton" href="cerrar_sesion.php">Crear Categoria</a>
-        <a class="boton" href="cerrar_sesion.php">Mis datos</a>
-        <a class="boton" href="cerrar_sesion.php">Cerrar Sesion</a>
-        </div>
-    <?php endif; ?>
     <div id="registro" class="bloque">
         <h3>Registrar</h3>
         <form action="registro.php" method="post">
@@ -41,4 +33,12 @@
             <input type="submit" name="submit" value="Registrar">
         </form>
     </div>
+    <?php  else: ?>
+        <div class="bloque">
+        <a class="boton" href="crear_entrada.php">Crear Entradas</a>
+        <a class="boton" href="crear_categoria.php">Crear Categoria</a>
+        <a class="boton" href="mis-datos.php">Mis datos</a>
+        <a class="boton" href="cerrar_sesion.php">Cerrar Sesion</a>
+        </div>
+    <?php endif; ?>
 </aside>
